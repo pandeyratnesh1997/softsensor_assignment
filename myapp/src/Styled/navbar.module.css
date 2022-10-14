@@ -1,0 +1,18 @@
+.nav_container{
+    position: sticky;
+    display: flex;
+   padding: 10px;
+   margin-bottom: 30px;
+    height: 50px;
+    width: 100%;
+    background-color: aqua;
+    font-size: larger;
+    justify-content: space-around;
+    font-weight: 600;
+}
+
+.link{
+    text-decoration: none;
+    position: relative;
+    top: 20%
+}

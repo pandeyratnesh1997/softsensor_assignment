@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useRef } from "react";
 import { useState } from "react";
 import ProductCard from "./ProductCard";
+import styles from '../Styled/homepage.module.css';
 
 
 const Homepage = () => {
@@ -53,6 +54,7 @@ const Homepage = () => {
 
   return (
     <div
+  
       onScroll={onScroll}
       ref={observer}
       style={{ height: "100vh", overflowY: "scroll" }}

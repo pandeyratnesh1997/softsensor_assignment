@@ -11,7 +11,7 @@ const ProductCard = (props) => {
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
  
-    navigate('/cartpage')
+    return navigate('/cartpage')
   };
 
   return (

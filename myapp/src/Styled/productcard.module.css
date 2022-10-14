@@ -4,6 +4,7 @@
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 20px;
+    margin-left: 35%;
 }
 
 .img{
@@ -29,4 +30,42 @@
             box-shadow: inset 0px 0px 5px #c1c1c1;
      outline: none;
      
+  }
+
+
+  @media only screen and (max-width: 480px){
+    .cont{
+        height: fit-content;
+        width : fit-content;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin: 20px;
+        margin-left: 10%
+    }
+    .img{
+        width: 180px;
+        height: 200px;
+        position: relative;
+        left : 10%;
+    }
+    
+  }
+
+  @media only screen and (mim-width: 481px) and (max-width: 768){
+    .cont{
+        height: fit-content;
+        width : fit-content;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin: 20px;
+        margin-left: 20%;
+       
+    }
+    .img{
+        width: 180px;
+        height: 200px;
+        position: relative;
+        left : 25%
+    }
+    
   }
