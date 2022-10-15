@@ -19,7 +19,7 @@
     color: white;
     font-size: larger;
    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    padding: 5px;
+    padding: 10px 15px 10px 15px
 
 }
 
@@ -51,7 +51,7 @@
     
   }
 
-  @media only screen and (mim-width: 481px) and (max-width: 768){
+  @media only screen and (min-width: 481px) and (max-width: 768px){
     .cont{
         height: fit-content;
         width : fit-content;
@@ -69,3 +69,14 @@
     }
     
   }
+
+
+
+  /* css for cart page */
+
+  .topDiv{
+    position: relative;
+   text-align: center;
+}
+
+

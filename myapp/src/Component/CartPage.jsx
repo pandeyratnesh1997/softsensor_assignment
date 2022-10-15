@@ -12,10 +12,10 @@ const moveBack = ()=>{
 }
 
   return (
-    <div>
-         <div>
+    <>
+         <div className={styles.topDiv}>
             <h2>Cart Page</h2>
-            <button onClick={moveBack}>Go Back</button>
+            <button className={styles.btn} onClick={moveBack}>Go Back</button>
          </div>
 
       {CartItems.length > 0 &&
@@ -34,14 +34,14 @@ const moveBack = ()=>{
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
 
-                <p>Cost: Rs. {item.price}</p>
+                <p>Cost: Rs. <strong>{item.price}</strong></p>
 
                 
               </div>
             </div>
           );
         })}
-    </div>
+    </>
   );
 };
 

@@ -8,21 +8,26 @@ import styles from '../Styled/homepage.module.css';
 
 const Homepage = () => {
   const [products, setProducts] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
+  const [error, setError] =useState(false);
 
   async function getData(page) {
     console.log(page);
+    setLoading(true)
     try {
-      let res = await axios.get(`http://localhost:5000`, {
+      let res = await axios.get(`https://stormy-dusk-84078.herokuapp.com/products`, {
         params: { page: page },
       });
-
+      setLoading(false);
+      setError(false)
       setProducts((prev) => {
         return [...new Set([...prev, ...res.data.data.map((item) => item)])];
       });
     } catch (error) {
       console.log(error);
+      setLoading(false)
+      setError(true)
     }
   }
 
@@ -52,12 +57,19 @@ const Homepage = () => {
     getData(page);
   }, [page]);
 
+ 
   return (
+    <>
+    <div className={styles.loaderDiv}>
+      {loading && <h2>Loading...</h2>}
+      {error &&  <h2>Error 500 Internal Server Error</h2>}
+
+    </div>
     <div
-  
+   
       onScroll={onScroll}
       ref={observer}
-      style={{ height: "100vh", overflowY: "scroll" }}
+      style={{ height: "100vh", overflowY: "auto" }}
     >
       { products.length > 0 &&  products.map((item, index) => {
         return (
@@ -67,6 +79,8 @@ const Homepage = () => {
         );
       })}
     </div>
+      
+    </>
   );
 };
 

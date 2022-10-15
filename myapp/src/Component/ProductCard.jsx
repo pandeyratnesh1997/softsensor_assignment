@@ -24,7 +24,7 @@ const ProductCard = (props) => {
         <h2>{props.title}</h2>
         <p>{props.description}</p>
 
-        <p>Cost: Rs. {props.price}</p>
+        <p>Cost: Rs. <strong>{props.price}</strong></p>
 
         <button onClick={() => handleAddToCart(props)} className={styles.btn}>
           Add To Cart

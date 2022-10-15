@@ -1,6 +1,10 @@
 .mainDiv{
    position: relative;
-   left: 35%;
+  
+}
+
+.loaderDiv{
+    margin-left : 10%;
 }
 
 
@@ -9,12 +13,14 @@
         position: relative;
         left: 0;
      }
+
+   
 }
 
-@media only screen and (mim-width: 481px) and (max-width: 768){
+@media only screen and (min-width: 481px) and (max-width: 768px){
     .mainDiv{
         position: relative;
         left: 0;
-     }
+    }
 
 }
